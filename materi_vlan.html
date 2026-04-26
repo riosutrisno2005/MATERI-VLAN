@@ -56,29 +56,6 @@
             margin: 0.45rem 0;
             text-align: justify;
         }
-        code {
-            background: #f1f5f9;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            color: #b91c1c;
-            border: 1px solid #e2e8f0;
-        }
-        pre {
-            background: #0f172a;
-            color: #e2e8f0;
-            padding: 16px 20px;
-            border-radius: 20px;
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        pre code {
-            background: none;
-            color: inherit;
-            border: none;
-            padding: 0;
-        }
         figure {
             margin: 30px 0;
             text-align: center;
@@ -100,12 +77,18 @@
             color: #2c6e9e;
             font-style: italic;
         }
+        /* Pembungkus tabel agar bisa di-scroll horizontal jika terlalu lebar */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0 24px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0 24px;
             font-size: 0.95rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            min-width: 500px; /* Memastikan tabel tidak mengecil terlalu kecil, scroll muncul jika perlu */
         }
         th, td {
             border: 1px solid #cbd5e1;
@@ -186,40 +169,60 @@
     <h3>a. Berdasarkan Port</h3>
     <p>Keanggotaan pada suatu VLAN dapat didasarkan pada <i>port</i> yang digunakan oleh VLAN tersebut.</p>
     <div class="table-caption">Tabel Port dan VLAN</div>
-    <table>
-        <thead>
-            <tr><th>Port</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
-        </thead>
-        <tbody>
-            <tr><th>VLAN</th><td>2</td><td>1</td><td>1</td><td>2</td></tr>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr><th>Port</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+            </thead>
+            <tbody>
+                <tr><th>VLAN</th><td>2</td><td>1</td><td>1</td><td>2</td></tr>
+            </tbody>
+        </table>
+    </div>
     <p>Pada tabel 10.1 <i>bridge</i> atau <i>switch</i> dengan 4 <i>port</i>, <i>port</i> 1 dan 4 merupakan VLAN 2 sedang <i>port</i> 2 dan 3 dimiliki oleh VLAN 1. Kelemahannya adalah user tidak bisa untuk berpindah-pindah, apabila harus berpindah maka Network administrator harus mengkonfigurasikan ulang.</p>
 
     <h3>b. Berdasarkan MAC Address</h3>
     <p>Keanggotaan suatu VLAN didasarkan pada <i>MAC address</i> dari setiap <i>workstation</i> atau komputer yang dimiliki oleh user. Switch mendeteksi atau mencatat semua <i>MAC address</i> yang dimiliki oleh setiap Virtual LAN.</p>
     <p>Kelebihannya apabila user berpindah-pindah maka dia akan tetap terkonfigurasi sebagai anggota dari VLAN tersebut. Sedangkan kekurangannya bahwa setiap mesin harus dikonfigurasikan secara manual, dan untuk jaringan yang memiliki ratusan <i>workstation</i> maka tipe ini kurang efisien.</p>
     <div class="table-caption">Tabel MAC Address dan VLAN</div>
-    <table>
-        <thead><tr><th>MAC Address</th><th>24444125556</th><th>132516617738</th><th>272389579355</th><th>536666337777</th></tr></thead>
-        <tbody><tr><th>VLAN</th><td>1</td><td>2</td><td>2</td><td>1</td></tr></tbody>
-    </table>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr><th>MAC Address</th><th>24444125556</th><th>132516617738</th><th>272389579355</th><th>536666337777</th></tr>
+            </thead>
+            <tbody>
+                <tr><th>VLAN</th><td>1</td><td>2</td><td>2</td><td>1</td></tr>
+            </tbody>
+        </table>
+    </div>
 
     <h3>c. Berdasarkan Tipe Protokol</h3>
     <p>Keanggotaan VLAN juga bisa berdasarkan protokol yang digunakan.</p>
     <div class="table-caption">Tabel Protokol dan VLAN</div>
-    <table>
-        <thead><tr><th>Protokol</th><th>IP</th><th>IPX</th></tr></thead>
-        <tbody><tr><th>VLAN</th><td>1</td><td>2</td></tr></tbody>
-    </table>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr><th>Protokol</th><th>IP</th><th>IPX</th></tr>
+            </thead>
+            <tbody>
+                <tr><th>VLAN</th><td>1</td><td>2</td></tr>
+            </tbody>
+        </table>
+    </div>
 
     <h3>d. Berdasarkan Alamat Subnet IP</h3>
     <p>Subnet IP address pada suatu jaringan juga dapat digunakan untuk mengklasifikasi suatu VLAN.</p>
     <div class="table-caption">Tabel IP Subnet dan VLAN</div>
-    <table>
-        <thead><tr><th>IP Subnet</th><th>22.3.24</th><th>46.20.45</th></tr></thead>
-        <tbody><tr><th>VLAN</th><td>1</td><td>2</td></tr></tbody>
-    </table>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr><th>IP Subnet</th><th>22.3.24</th><th>46.20.45</th></tr>
+            </thead>
+            <tbody>
+                <tr><th>VLAN</th><td>1</td><td>2</td></tr>
+            </tbody>
+        </table>
+    </div>
     <p>Konfigurasi ini tidak berhubungan dengan <i>routing</i> pada jaringan. IP address digunakan untuk memetakan keanggotaan VLAN. Keuntungannya seorang user tidak perlu mengkonfigurasikan ulang alamatnya apabila berpindah tempat, hanya saja karena bekerja di layer yang lebih tinggi maka akan sedikit lebih lambat dibanding menggunakan <i>MAC addresses</i>.</p>
 
     <h3>e. Berdasarkan Aplikasi atau Kombinasi Lain</h3>
