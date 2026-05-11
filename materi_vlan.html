@@ -136,7 +136,7 @@
 
     <!-- 1. Pengertian VLAN -->
     <h2>1. Pengertian <i>VLAN</i></h2>
-    <p><strong><i>VLAN</i> merupakan suatu model jaringan yang tidak terbatas pada lokasi fisik seperti <i>LAN</i></strong>, hal ini mengakibatkan suatu <strong><i>network</i> dapat dikonfigurasi secara virtual tanpa harus menuruti lokasi fisik peralatan</strong>. <strong>Penggunaan <i>VLAN</i> akan membuat pengaturan jaringan menjadi sangat fleksibel</strong> dimana dapat dibuat segmen yang bergantung pada organisasi atau departemen, tanpa bergantung pada lokasi <i>workstation</i> seperti pada gambar berikut.</p>
+    <p><strong><i>VLAN</i> merupakan suatu model jaringan yang tidak terbatas pada lokasi fisik seperti <i>LAN</i></strong>, hal ini mengakibatkan suatu <strong><i>network</i> dapat dikonfigurasi secara virtual tanpa harus mendeteksi lokasi fisik peralatan</strong>. <strong>Penggunaan <i>VLAN</i> akan membuat pengaturan jaringan menjadi sangat fleksibel</strong> yaitu dapat dibuat segmen yang bergantung pada organisasi atau departemen, tanpa bergantung pada lokasi <i>workstation</i> seperti pada gambar berikut.</p>
 
     <figure>
         <img src="Gambar1.png" alt="Diagram VLAN">
@@ -148,26 +148,26 @@
         <figcaption>Gambar 2</figcaption>
     </figure>
 
-    <h2>2. Fungsi Penggunaan <i>VLAN</i> (Tujuan & Keuntungan)</h2>
+    <h2>2. Keuntungan Penggunaan <i>VLAN</i></h2>
     <p>Beberapa keuntungan penggunaan <i>VLAN</i> antara lain:</p>
     <ul>
-        <li><b><i>Security</i></b> – <strong>keamanan data dari setiap divisi dapat dibuat tersendiri</strong>, karena segmennya bisa dipisah secara logika. Lalu lintas data dibatasi segmennya.</li>
-        <li><b><i>Cost reduction</i></b> – <strong>penghematan dari penggunaan <i>bandwidth</i> yang ada dan dari <i>upgrade</i> perluasan <i>network</i> yang bisa jadi mahal</strong>.</li>
-        <li><b><i>Higher performance</i></b> – <strong>pembagian jaringan <i>layer 2</i> ke dalam beberapa kelompok <i>broadcast domain</i> yang lebih kecil</strong>, yang tentunya akan mengurangi lalu lintas <i>packet</i> yang tidak dibutuhkan dalam jaringan.</li>
-        <li><b><i>Broadcast storm mitigation</i></b> – <strong>pembagian jaringan ke dalam <i>VLAN</i>-<i>VLAN</i> akan mengurangi banyaknya <i>device</i> yang berpartisipasi dalam pembuatan <i>broadcast storm</i></strong>.</li>
-        <li><b><i>Improved IT staff efficiency</i></b> – <strong><i>VLAN</i> memudahkan manajemen jaringan</strong> karena pengguna yang membutuhkan sumber daya yang dibutuhkan berbagi dalam segmen yang sama.</li>
-        <li><b><i>Simpler project or application management</i></b> – <strong><i>VLAN</i> menggabungkan para pengguna jaringan dan peralatan jaringan untuk mendukung perusahaan dan menangani permasalahan kondisi geografis</strong>.</li>
+        <li><b><i>Security,</i></b> – <strong>keamanan data dari setiap divisi dapat dibuat tersendiri</strong>, karena segmennya dapat dipisah secara logika. Lalu lintas data dibatasi oleh segmennya.</li>
+        <li><b><i>Cost reduction,</i></b> – <strong>penghematan dari penggunaan <i>bandwidth</i> yang ada dan dari <i>upgrade</i> perluasan <i>network</i> yang dapat mejadi mahal</strong>.</li>
+        <li><b><i>Higher performance,</i></b> – <strong>pembagian jaringan <i>layer dua</i> ke dalam beberapa kelompok <i>broadcast domain</i> yang lebih kecil</strong>,  tentunya akan mengurangi lalu lintas <i>packet</i> yang tidak dibutuhkan dalam jaringan.</li>
+        <li><b><i>Broadcast storm mitigation,</i></b> – <strong>pembagian jaringan ke dalam <i>VLAN</i>-<i>VLAN</i> akan mengurangi banyaknya <i>device</i> yang berpartisipasi dalam pembuatan <i>broadcast storm</i></strong>.</li>
+        <li><b><i>Improved IT staff efficiency,</i></b> – <strong><i>VLAN</i> memudahkan manajemen jaringan</strong> karena pengguna yang membutuhkan sumber daya yang dibutuhkan berbagi dalam segmen yang sama.</li>
+        <li><b><i>Simpler project or application management,</i></b> – <strong><i>VLAN</i> menggabungkan para pengguna jaringan dan peralatan jaringan untuk mendukung perusahaan dan menangani permasalahan kondisi geografis</strong>.</li>
     </ul>
 
     <h2>3. Cara Kerja <i>VLAN</i></h2>
     <p><strong><i>VLAN</i> diklasifikasikan berdasarkan metode (<i>tipe</i>) yang digunakan untuk mengklasifikasikannya</strong>, baik menggunakan <i>port</i>, <i>MAC addresses</i> dan sebagainya. <strong>Semua informasi yang mengandung penandaan atau pengalamatan suatu <i>VLAN</i> (<i>tagging</i>) disimpan dalam suatu <i>database</i> (tabel)</strong>, jika penandaannya berdasarkan <i>port</i> yang digunakan maka <i>database</i> harus mengindikasikan <i>port</i>-<i>port</i> yang digunakan oleh <i>VLAN</i>.</p>
-    <p><strong>Untuk mengaturnya maka biasanya digunakan <i>switch</i> atau <i>bridge</i> yang <i>manageable</i></strong> atau yang bisa diatur. <i>Switch</i> atau <i>bridge</i> inilah yang bertanggung jawab menyimpan semua informasi dan konfigurasi suatu <i>VLAN</i> dan dipastikan semua <i>switch</i> atau <i>bridge</i> memiliki informasi yang sama. <strong><i>Switch</i> akan menentukan kemana <i>data</i>-<i>data</i> akan diteruskan</strong>. <strong>Untuk menghubungkan antar <i>VLAN</i> dibutuhkan <i>router</i></strong>.</p>
+    <p><strong>Biasanya digunakan <i>switch</i> atau <i>bridge</i> yang <i>manageable</i></strong> untuk dapat mengatur. <i>Switch</i> atau <i>bridge</i> inilah yang bertanggung jawab menyimpan semua informasi, konfigurasi suatu <i>VLAN</i> dan dipastikan semua <i>switch</i> atau <i>bridge</i> memiliki informasi yang sama. <strong><i>Switch</i> akan menentukan tujuan <i>data</i>-<i>data</i> akan diteruskan</strong>. <strong>jika ingin menghubungkan antar <i>VLAN</i> dibutuhkan <i>router</i></strong>.</p>
 
     <h2>4. Tipe-Tipe <i>VLAN</i></h2>
-    <p>Keanggotaan dalam suatu <i>VLAN</i> dapat diklasifikasikan berdasarkan <i>port</i> yang digunakan, <i>MAC address</i>, tipe protokol.</p>
+    <p><i>VLAN</i> dapat diklasifikasikan berdasarkan <i>port</i> yang digunakan, <i>MAC address</i>, tipe protokol.</p>
 
     <h3>a. Berdasarkan <i>Port</i></h3>
-    <p><strong>Keanggotaan pada suatu <i>VLAN</i> dapat didasarkan pada <i>port</i> yang digunakan oleh <i>VLAN</i> tersebut</strong>.</p>
+    <p><strong>Bagian pada suatu <i>VLAN</i> dapat didasarkan pada <i>port</i> yang digunakan oleh <i>VLAN</i> tersebut</strong>.</p>
     <div class="table-caption">Tabel <i>Port</i> dan <i>VLAN</i></div>
     <div class="table-responsive">
         <table>
@@ -179,11 +179,11 @@
             </tbody>
         </table>
     </div>
-    <p>Pada tabel 10.1 <i>bridge</i> atau <i>switch</i> dengan 4 <i>port</i>, <i>port</i> 1 dan 4 merupakan <i>VLAN</i> 2 sedang <i>port</i> 2 dan 3 dimiliki oleh <i>VLAN</i> 1. <strong>Kelemahannya adalah <i>user</i> tidak bisa untuk berpindah-pindah</strong>, apabila harus berpindah maka <i>Network administrator</i> harus mengkonfigurasikan ulang.</p>
+    <p>Pada tabel diatas <i>bridge</i> atau <i>switch</i> dengan 4 <i>port</i>, <i>port</i> 1 dan 4 merupakan <i>VLAN</i> 2 sedang <i>port</i> 2 dan 3 dimiliki oleh <i>VLAN</i> 1. <strong>Kelemahannya adalah <i>user</i> tidak dapat untuk berpindah-pindah</strong>. Apabila harus berpindah, maka <i>Network administrator</i> harus mengkonfigurasikan ulang.</p>
 
     <h3>b. Berdasarkan <i>MAC Address</i></h3>
-    <p>Keanggotaan suatu <i>VLAN</i> didasarkan pada <i>MAC address</i> dari setiap <i>workstation</i> atau komputer yang dimiliki oleh <i>user</i>. <strong><i>Switch</i> mendeteksi atau mencatat semua <i>MAC address</i> yang dimiliki oleh setiap <i>Virtual LAN</i></strong>.</p>
-    <p><strong>Kelebihannya apabila <i>user</i> berpindah-pindah maka dia akan tetap terkonfigurasi sebagai anggota dari <i>VLAN</i> tersebut</strong>. Sedangkan <strong>kekurangannya bahwa setiap mesin harus dikonfigurasikan secara manual</strong>, dan untuk jaringan yang memiliki ratusan <i>workstation</i> maka tipe ini kurang efisien.</p>
+    <p>Bagian pada suatu <i>VLAN</i> didasarkan pada <i>MAC address</i> dari setiap <i>workstation</i> atau komputer yang dimiliki oleh <i>user</i>. <strong><i>Switch</i> mendeteksi atau mencatat semua <i>MAC address</i> yang dimiliki oleh setiap <i>Virtual LAN</i></strong>.</p>
+    <p><strong>Kelebihannya apabila <i>user</i> berpindah-pindah maka <i>user</i> akan tetap terkonfigurasi sebagai anggota dari <i>VLAN</i> tersebut</strong>. Sedangkan <strong>kekurangannya bahwa setiap mesin harus dikonfigurasikan secara manual</strong>, dan bagi jaringan yang memiliki ratusan <i>workstation,</i> maka tipe ini kurang efisien.</p>
     <div class="table-caption">Tabel <i>MAC Address</i> dan <i>VLAN</i></div>
     <div class="table-responsive">
         <table>
@@ -197,7 +197,7 @@
     </div>
 
     <h3>c. Berdasarkan Tipe Protokol</h3>
-    <p>Keanggotaan <i>VLAN</i> juga bisa berdasarkan protokol yang digunakan.</p>
+    <p>bagian <i>VLAN</i> juga dapat berdasarkan protokol yang digunakan.</p>
     <div class="table-caption">Tabel Protokol dan <i>VLAN</i></div>
     <div class="table-responsive">
         <table>
@@ -226,10 +226,10 @@
     <p>Konfigurasi ini tidak berhubungan dengan <i>routing</i> pada jaringan. <i>IP address</i> digunakan untuk memetakan keanggotaan <i>VLAN</i>. <strong>Keuntungannya seorang <i>user</i> tidak perlu mengkonfigurasikan ulang alamatnya apabila berpindah tempat</strong>, hanya saja <strong>karena bekerja di <i>layer</i> yang lebih tinggi maka akan sedikit lebih lambat dibanding menggunakan <i>MAC addresses</i></strong>.</p>
 
     <h3>e. Berdasarkan Aplikasi atau Kombinasi Lain</h3>
-    <p>Sangat dimungkinkan untuk menentukan suatu <i>VLAN</i> berdasarkan <strong>aplikasi yang dijalankan</strong>, atau kombinasi dari semua tipe di atas. Misalkan: aplikasi <i>FTP</i> hanya bisa digunakan oleh <i>VLAN</i> 1 dan <i>Telnet</i> hanya bisa digunakan pada <i>VLAN</i> 2.</p>
+    <p>Sangat memungkinkan untuk menentukan suatu <i>VLAN</i> berdasarkan <strong>aplikasi yang dijalankan</strong>, atau kombinasi dari semua tipe di atas. Misalnya aplikasi <i>FTP</i> hanya dapat digunakan oleh <i>VLAN</i> 1 dan <i>telnet</i> hanya dapat digunakan pada <i>VLAN</i> 2.</p>
 
     <hr>
-    <p style="font-size: 0.8rem; text-align: center; color: #2c6b84;">2026</p>
+    <p style="font-size: 0.8rem; text-align: center; color: #2c6b84;"></p>
 </div>
 </body>
 </html>
